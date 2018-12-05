@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Scrapy settings for images360 project
+# Scrapy settings for scrapyseleniumtest project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -9,14 +9,14 @@
 #     https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'images360'
+BOT_NAME = 'scrapyseleniumtest'
 
-SPIDER_MODULES = ['images360.spiders']
-NEWSPIDER_MODULE = 'images360.spiders'
+SPIDER_MODULES = ['scrapyseleniumtest.spiders']
+NEWSPIDER_MODULE = 'scrapyseleniumtest.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'images360 (+http://www.yourdomain.com)'
+#USER_AGENT = 'scrapyseleniumtest (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = False
@@ -27,7 +27,7 @@ ROBOTSTXT_OBEY = False
 # Configure a delay for requests for the same website (default: 0)
 # See https://doc.scrapy.org/en/latest/topics/settings.html#download-delay
 # See also autothrottle settings and docs
-DOWNLOAD_DELAY = 1
+#DOWNLOAD_DELAY = 3
 # The download delay setting will honor only one of:
 #CONCURRENT_REQUESTS_PER_DOMAIN = 16
 #CONCURRENT_REQUESTS_PER_IP = 16
@@ -47,13 +47,13 @@ DOWNLOAD_DELAY = 1
 # Enable or disable spider middlewares
 # See https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    'images360.middlewares.Images360SpiderMiddleware': 543,
+#    'scrapyseleniumtest.middlewares.ScrapyseleniumtestSpiderMiddleware': 543,
 #}
 
 # Enable or disable downloader middlewares
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    'images360.middlewares.Images360DownloaderMiddleware': 543,
+#    'scrapyseleniumtest.middlewares.ScrapyseleniumtestDownloaderMiddleware': 543,
 #}
 
 # Enable or disable extensions
@@ -64,10 +64,9 @@ DOWNLOAD_DELAY = 1
 
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
-ITEM_PIPELINES = {
-   'images360.pipelines.Images360Pipeline': 300,
-   'images360.pipelines.MongoPipeline': 301
-}
+#ITEM_PIPELINES = {
+#    'scrapyseleniumtest.pipelines.ScrapyseleniumtestPipeline': 300,
+#}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://doc.scrapy.org/en/latest/topics/autothrottle.html
@@ -89,8 +88,3 @@ ITEM_PIPELINES = {
 #HTTPCACHE_DIR = 'httpcache'
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
-
-MAX_PAGE = 50
-IMAGES_STORE = './Images'
-MONGO_URI = 'localhost'
-MONGO_DB = 'images360'

@@ -29,3 +29,4 @@ class ImagesSpider(scrapy.Spider):
             item['title'] = image.get('group_title')
             item['thumb'] = image.get('qhimg_thumb_url')
             yield item
+1
